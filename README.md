@@ -16,7 +16,14 @@ This project is a simple image classification based on keras
     (1) Download from kaggle
     (2) google 
 ### 3. request
-    (1) For the dataset, you have to have two folder, one is trainset, other is testset. 30% of the trainset will be validation set
+    (1) For the dataset, you have to have two folder, one is trainset, other is testset.     
+        30% of the trainset will be validation set
     (2) For this program, you can only classify two class of object
 
-## Introdution
+## Operation instruction
+    (1) After preparing the dataset and basic path name modification, you can run the main.py.    
+    (2) I use checkpoint to store the best model every epoch and the program will load it after.
+    (3) There will be a brief model summray. After that, you can see some test example with images and labels
+    (4)
+    
+    
