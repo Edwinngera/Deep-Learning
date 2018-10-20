@@ -26,9 +26,9 @@ This project is a simple image classification based on keras
     (2) Using checkpoint to store the best model every epoch and the program will load it after.
     (3) There will be a brief model summray. After that, you can see some test example with images and labels
         and also graphs about accuracy and loss.
-### 2. inprovement
-    (1) try more complex model 
-    (2) use tensorflow, pytorch instead of keras
+### 2. Advanced usage
+#### API
+    (1) import the python file. There are many function that you can use as well as the model.
     
     
     
