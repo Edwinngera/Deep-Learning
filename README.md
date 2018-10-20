@@ -24,6 +24,7 @@ This project is a simple image classification based on keras
     (1) After preparing the dataset and basic path name modification, you can run the main.py.    
     (2) I use checkpoint to store the best model every epoch and the program will load it after.
     (3) There will be a brief model summray. After that, you can see some test example with images and labels
-    (4)
+        and also graphs about accuracy and loss.
+    
     
     
