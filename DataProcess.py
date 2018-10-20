@@ -3,14 +3,16 @@ import os
 from random import shuffle
 from tqdm import tqdm
 import  numpy as np
-import PIL
 
-oldPathName = '/Users/wang/Desktop/MiniProject/oldPathName/'
-newPathName ='/Users/wang/Desktop/MiniProject/Dataset/'
+
+
+DataSetPathName ='/Users/wang/Desktop/MiniProject/Dataset/'
+# Store the object name you want to classify
 objectName = ['cat','dog']
 trainPathName = '/Users/wang/Desktop/MiniProject/cat-and-dog/Train/'
 testPathName = '/Users/wang/Desktop/MiniProject/cat-and-dog/Test/'
 
+# if you do not have data set, you can use this function to make one to store the data
 def mkdir(newPathName):
 
     folder = os.path.exists(newPathName)
@@ -23,17 +25,21 @@ def mkdir(newPathName):
     else:
         print("---  There exists this folder!  ---")
 
-def rename():
-    mkdir(newPathName)
+# if your images name do not satisfy request, you can use this function to change the images name
+# path is the path of your images stored, obname is the name of the object
+def rename(path,obname):
     i = 1
-    for item in os.listdir(oldPathName):
+    for item in os.listdir(path):
         if item.endswith('.jpg') or item.endswith('.png'):
-            old_name = oldPathName + str(item)
-            new_name = newPathName+objectName[0]+'.'+str(i)+'.jpg'
-            img = PIL.Image.open(old_name)
-            img.save(new_name)
+            old_name = path + str(item)
+            if item.endswith('.jpg'):
+                new_name = path+obname+'.'+str(i)+'.png'
+            elif item.endswith('.png'):
+                new_name = path + obname + '.' + str(i) + '.jpg'
+            os.rename(old_name,new_name)
             i = i + 1
 
+# get the label from images name
 def label(img):
     lab = img.split('.')[0]
     if lab == objectName[0]:
@@ -44,6 +50,7 @@ def label(img):
         tag = np.array([0,1])
     return tag
 
+# resize and shuffle the train images
 def train_data_with_label():
     train_images = []
     for fileName in tqdm(os.listdir(trainPathName)):
@@ -55,6 +62,7 @@ def train_data_with_label():
     shuffle(train_images)
     return train_images
 
+# resize the test images
 def test_data_with_label():
     test_images = []
     for fileName in tqdm(os.listdir(testPathName)):

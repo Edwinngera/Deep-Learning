@@ -2,6 +2,7 @@ from keras.models import Sequential
 from keras.layers import *
 from keras.optimizers import *
 
+# build a model which have 3 convolution layers
 model = Sequential()
 
 model.add(InputLayer(input_shape=[64,64,1]))
