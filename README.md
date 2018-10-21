@@ -1,6 +1,10 @@
 # Deep-Learning
 This project is an image classification based on keras and tensorflow
 ## Keras -- image classification of two classes of objects
+    file list:
+    (1) DataProcess.py
+    (2) model.py
+    (3) main.py
 ### Precondition
 #### 1. install neccesary packages
     (1) numpy   
@@ -29,7 +33,7 @@ This project is an image classification based on keras and tensorflow
 #### 2. API
     import the python file. There are many function that you can use as well as the model.
 
-## CNN model 
+## CNN model -- image classification of five classes of objects or more
 ### Precondition 
 #### 1. Dataset
     (1) Download from kaggle (5 classes of flowers)    
@@ -40,3 +44,7 @@ This project is an image classification based on keras and tensorflow
     (1) run the CNN_Image_Classifition.py
     (2) There will be a graph about accuracy and loss
     
+    
+## Comparison of two classification model
+### model achitecture
+
