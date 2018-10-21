@@ -43,8 +43,14 @@ This project is an image classification based on keras and tensorflow
 ### Operation instruction
     (1) run the CNN_Image_Classifition.py
     (2) There will be a graph about accuracy and loss
+### Results
+##### learning rate = 1e-4
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%3D10%20-4.png)
+##### learning rate = 5e-5
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%20%3D%205%2010%20-5.png)
+##### learning rate = 2e-5
+![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%20%3D%202%2010%20-%205.png)
+
 ## Comparison of two classification model
 ### model achitecture
 
