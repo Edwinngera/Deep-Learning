@@ -34,7 +34,7 @@ This project is an image classification based on keras and tensorflow
     import the python file. There are many function that you can use as well as the model.
 ### Results
 #### Accuracy
-![Image](https://github.com/zywan/Deep-Learning/blob/master/acc.png)
+![Image](https://github.com/zywan/Deep-Learning/blob/master/Accuracy.png)
 #### Loss
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/loss.png)
 #### Some examples
