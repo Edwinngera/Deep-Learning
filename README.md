@@ -33,7 +33,7 @@ This project is an image classification based on keras and tensorflow
 ### Precondition 
 #### 1. Dataset
     (1) Download from kaggle (5 classes of flowers)    
-    https://www.kaggle.com/alxmamaev/flowers-recognition 
+    [Lets go to Kaggle](https://www.kaggle.com/alxmamaev/flowers-recognition)
     (2) For the dataset, the file name is the label name
 ### Operation instruction
     (1) run the CNN_Image_Classifition.py
