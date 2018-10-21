@@ -32,10 +32,16 @@ This project is an image classification based on keras and tensorflow
         and also graphs about accuracy and loss.
 #### 2. API
     import the python file. There are many function that you can use as well as the model.
-
+### Results
+#### Accuracy
+![Image](https://github.com/zywan/Deep-Learning/blob/master/acc.png)
+#### Loss
+![Image](https://github.com/zywan/Deep-Learning/blob/master/loss.png)
+#### Some examples
+![Image](https://github.com/zywan/Deep-Learning/blob/master/Figure_1.png)
 ## CNN model -- image classification of five classes of objects or more
 ### Precondition 
-#### 1. Dataset
+#### Dataset
     (1) Download from kaggle (5 classes of flowers)    
 [Lets go to Kaggle]( https://www.kaggle.com/alxmamaev/flowers-recognition)      
     
