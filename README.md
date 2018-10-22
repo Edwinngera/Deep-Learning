@@ -19,6 +19,7 @@ This project is an image classification based on keras and tensorflow
         pip3 install opencv-python
 #### 2. prepare dataset
     (1) Download from kaggle
+    [lets go to kaggle](https://www.kaggle.com/rahul897/catsdogs)
     (2) google 
     (3) For the dataset, you have to have two folder, one is trainset, other is testset.     
         30% of the trainset will be validation set
