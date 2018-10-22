@@ -23,7 +23,7 @@ The image resolution is set to be 64*64.
 [lets go to kaggle](https://www.kaggle.com/rahul897/catsdogs)     
 
     (2) google 
-    create several folders and store images in them, folder name will be the label name for the images in it.
+        create several folders and store images in them, folder name will be the label name for the images in it.
     (3) For the dataset, you have to have two folder, one is trainset, other is testset.     
         30% of the trainset will be validation set
     (4) For this program, you can only classify two class of object
