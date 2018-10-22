@@ -18,6 +18,8 @@ The image resolution is set to be 64*64.
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%3D10%20-4.png)
 ##### learning rate = 5e-5
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%20%3D%205%2010%20-5.png)
+##### learning rate = 4e-5
+![Image](https://github.com/zywan/Deep-Learning/blob/master/new_acc.png)
 ##### learning rate = 2e-5
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%20%3D%202%2010%20-%205.png)
 
