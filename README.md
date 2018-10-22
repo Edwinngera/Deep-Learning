@@ -59,4 +59,8 @@ This project is an image classification based on keras and tensorflow
 
 ## Comparison of two classification model
 ### model achitecture
+    Basically, the main difference between the two models are the convolutional layers, one have 3 convolutional layer and another have two, I tried to use 5 or more convolutional layers but it does not improve the performance a lot, so I simplify the model.
+### Performance
+    As you can see from the graph above, both of the model have some overfitting issues, as for the five classes image classification, accuracy of 70% is fine, but for the 2 classes classification, the validation set accuracy is not that high may be because of the resolution of the images and also the learning rate, drop out and some other element.     
+    As for the tensorflow model, I change the learning rate to restrict some overfitting but the result is not that good.
 
