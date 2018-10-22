@@ -18,8 +18,8 @@ This project is an image classification based on keras and tensorflow
     (5) cv2
         pip3 install opencv-python
 #### 2. prepare dataset
-    (1) Download from kaggle
-    [lets go to kaggle] (https://www.kaggle.com/rahul897/catsdogs)
+    (1) Download from kaggle (2 classs, such as dog and cat)
+[lets go to kaggle](https://www.kaggle.com/rahul897/catsdogs)
     (2) google 
     create several folders and store images in them, folder name will be the label name for the images in it.
     (3) For the dataset, you have to have two folder, one is trainset, other is testset.     
@@ -42,6 +42,8 @@ This project is an image classification based on keras and tensorflow
 #### Some examples
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/Figure_1.png)
 ## CNN model -- image classification of five classes of objects or more
+    file:
+    CNN_Image_Classification.py
 ### Precondition 
 #### Dataset
     (1) Download from kaggle (5 classes of flowers)    
