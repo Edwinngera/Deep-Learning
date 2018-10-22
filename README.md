@@ -69,5 +69,5 @@ Basically, the main difference between the two models are the convolutional laye
 I tried to use 5 or more convolutional layers but it does not improve the performance a lot, and for mac, there is no NVIDIA GPU, the process would last for so long if the model is complicated, so I just simplify the model and guarantee a certain level of accuracy.
 ### Performance
 As you can see from the graph above, both of the model have some overfitting issues, as for the five classes image classification, accuracy of 70% is fine, but for the 2 classes classification, the validation set accuracy is not that high may be because of the resolution of the images and also the learning rate, drop out and some other elements.          
-For the tensorflow model, I change the learning rate to restrain some overfitting but the result is not that good, but it is in a reasonable range.
+I change the learning rate to restrain some overfitting but the result is not that good, but it is in a reasonable range.
 
