@@ -18,8 +18,9 @@ This project is an image classification based on keras and tensorflow
     (5) cv2
         pip3 install opencv-python
 #### 2. prepare dataset
-    (1) Download from kaggle (2 classs, such as dog and cat)
-[lets go to kaggle](https://www.kaggle.com/rahul897/catsdogs)
+    (1) Download from kaggle ( 2 classs, such as dog and cat)
+[lets go to kaggle](https://www.kaggle.com/rahul897/catsdogs)     
+
     (2) google 
     create several folders and store images in them, folder name will be the label name for the images in it.
     (3) For the dataset, you have to have two folder, one is trainset, other is testset.     
@@ -66,6 +67,6 @@ This project is an image classification based on keras and tensorflow
 Basically, the main difference between the two models are the convolutional layers, one have 3 convolutional layer and another have two, 
 I tried to use 5 or more convolutional layers but it does not improve the performance a lot, so I simplify the model.
 ### Performance
-As you can see from the graph above, both of the model have some overfitting issues, as for the five classes image classification, accuracy of 70% is fine, but for the 2 classes classification, the validation set accuracy is not that high may be because of the resolution of the images and also the learning rate, drop out and some other element.       
-    As for the tensorflow model, I change the learning rate to restrict some overfitting but the result is not that good.
+As you can see from the graph above, both of the model have some overfitting issues, as for the five classes image classification, accuracy of 70% is fine, but for the 2 classes classification, the validation set accuracy is not that high may be because of the resolution of the images and also the learning rate, drop out and some other element.          
+As for the tensorflow model, I change the learning rate to restrict some overfitting but the result is not that good.
 
