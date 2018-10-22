@@ -1,5 +1,6 @@
 # Deep-Learning
 This project is an image classification based on keras and tensorflow
+The image resolution is set to be 64*64.
 ## Keras -- image classification of two classes of objects
     file list:
     (1) DataProcess.py
