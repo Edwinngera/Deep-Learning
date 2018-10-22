@@ -1,6 +1,26 @@
 # Deep-Learning
 This project is an image classification based on keras and tensorflow
 The image resolution is set to be 64*64.
+## CNN model -- image classification of five classes of objects or more
+    file:
+    CNN_Image_Classification.py
+### Precondition 
+#### Dataset
+    (1) Download from kaggle (5 classes of flowers)    
+[Lets go to Kaggle]( https://www.kaggle.com/alxmamaev/flowers-recognition)      
+    
+    (2) For the dataset, the file name is the label name
+### Operation instruction
+    (1) run the CNN_Image_Classifition.py
+    (2) There will be a graph about accuracy and loss
+### Results
+##### learning rate = 1e-4
+![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%3D10%20-4.png)
+##### learning rate = 5e-5
+![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%20%3D%205%2010%20-5.png)
+##### learning rate = 2e-5
+![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%20%3D%202%2010%20-%205.png)
+
 ## Keras -- image classification of two classes of objects
     file list:
     (1) DataProcess.py
@@ -43,25 +63,7 @@ The image resolution is set to be 64*64.
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/loss.png)
 #### Some examples
 ![Image](https://github.com/zywan/Deep-Learning/blob/master/Figure_1.png)
-## CNN model -- image classification of five classes of objects or more
-    file:
-    CNN_Image_Classification.py
-### Precondition 
-#### Dataset
-    (1) Download from kaggle (5 classes of flowers)    
-[Lets go to Kaggle]( https://www.kaggle.com/alxmamaev/flowers-recognition)      
-    
-    (2) For the dataset, the file name is the label name
-### Operation instruction
-    (1) run the CNN_Image_Classifition.py
-    (2) There will be a graph about accuracy and loss
-### Results
-##### learning rate = 1e-4
-![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%3D10%20-4.png)
-##### learning rate = 5e-5
-![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%20%3D%205%2010%20-5.png)
-##### learning rate = 2e-5
-![Image](https://github.com/zywan/Deep-Learning/blob/master/lr%20%3D%202%2010%20-%205.png)
+
 
 ## Comparison of two classification model
 ### model achitecture
