@@ -5,12 +5,8 @@ from tqdm import tqdm
 import  numpy as np
 
 
-
-DataSetPathName ='/Users/wang/Desktop/MiniProject/Dataset/'
 # Store the object name you want to classify
-objectName = ['cat','dog']
-trainPathName = '/Users/wang/Desktop/MiniProject/cat-and-dog/Train/'
-testPathName = '/Users/wang/Desktop/MiniProject/cat-and-dog/Test/'
+objectName = ['cats','dogs']
 
 # if you do not have data set, you can use this function to make one to store the data
 def mkdir(newPathName):
@@ -39,36 +35,42 @@ def rename(path,obname):
             os.rename(old_name,new_name)
             i = i + 1
 
-# get the label from images name
-def label(img):
-    lab = img.split('.')[0]
-    if lab == objectName[0]:
-        # cat is [1,0]
-        tag = np.array([1,0])
-    elif lab == objectName[1]:
-        # dog is [0,1]
+# get the label of image
+def label(name):
+    if name ==objectName[0]:
+        tag = np.array([1, 0])
+    elif name ==objectName[1]:
         tag = np.array([0,1])
     return tag
 
-# resize and shuffle the train images
-def train_data_with_label():
-    train_images = []
-    for fileName in tqdm(os.listdir(trainPathName)):
-        path = os.path.join(trainPathName,fileName)
-        if path.endswith('png') or path.endswith('.jpg'):
-            img = cv2.imread(path,cv2.IMREAD_GRAYSCALE)
-            img = cv2.resize(img,(64,64),interpolation=cv2.INTER_CUBIC)
-            train_images.append([np.array(img),label(fileName)])
-    shuffle(train_images)
-    return train_images
+# combine labels and trainset
+def trainset_with_label(path):
 
-# resize the test images
-def test_data_with_label():
-    test_images = []
-    for fileName in tqdm(os.listdir(testPathName)):
-        path = os.path.join(testPathName, fileName)
-        if path.endswith('png')or path.endswith('.jpg'):
-            img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-            img = cv2.resize(img, (64, 64),interpolation=cv2.INTER_CUBIC)
-            test_images.append([np.array(img), label(fileName)])
-    return test_images
+    images = []
+    for name in os.listdir(path):
+        object_path = os.path.join(path,name)
+        for filename in tqdm(os.listdir(object_path)):
+            full_path = os.path.join(object_path,filename)
+            if full_path.endswith('png') or full_path.endswith('.jpg'):
+                img = cv2.imread(full_path, cv2.IMREAD_GRAYSCALE)
+                img = cv2.resize(img, (64, 64), interpolation=cv2.INTER_CUBIC)
+                images.append([np.array(img),label(str(name))])
+
+    shuffle(images)
+    return images
+
+# combine labels and testset
+def testset_with_label(path):
+
+    images = []
+    for name in os.listdir(path):
+        object_path = os.path.join(path, name)
+        for filename in tqdm(os.listdir(object_path)):
+            full_path = os.path.join(object_path, filename)
+            if full_path.endswith('png') or full_path.endswith('.jpg'):
+                img = cv2.imread(full_path, cv2.IMREAD_GRAYSCALE)
+                img = cv2.resize(img, (64, 64), interpolation=cv2.INTER_CUBIC)
+                images.append([np.array(img), label(str(name))])
+    shuffle(images)
+    return images
+

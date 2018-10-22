@@ -5,6 +5,15 @@ import model as m
 import matplotlib.pyplot as plt
 from keras.callbacks import ModelCheckpoint
 
+# data set folder path name if you need
+# This is only for you if you don't have a date set folder
+DataSetPathName ='/Users/wang/Desktop/MiniProject/Dataset/'
+# Store the object name you want to classify
+objectName = ['cats','dogs']
+# path of the train set
+trainPathName = '/Users/wang/Desktop/MiniProject/catsdogs/training_set/'
+# path of the test set
+testPathName = '/Users/wang/Desktop/MiniProject/catsdogs/test_set/'
 
 def main():
     FolderRequest = str(input('Do you have data set? Y for yes and N for no:'))
@@ -15,16 +24,8 @@ def main():
               'please prepare your dataset and run the program again')
         os._exit(0)
 
-    RenameRequest = str(input('Do you rename the data set to right formula? Y for yes and N for no:'))
-
-    if RenameRequest == 'N':
-        print('Now, you should rename the image,the program is end now,'
-              'please finish the rename process run the program again')
-        os._exit(0)
-
-
-    training_images = DataProcess.train_data_with_label()
-    testing_images = DataProcess.test_data_with_label()
+    training_images = DataProcess.trainset_with_label(trainPathName)
+    testing_images = DataProcess.testset_with_label(testPathName)
     train_img_data = np.array([i[0] for i in training_images]).reshape(-1, 64, 64, 1)
     train_lbl_data = np.array([i[1] for i in training_images])
     test_img_data = np.array([i[0] for i in testing_images]).reshape(-1, 64, 64, 1)
@@ -41,7 +42,7 @@ def main():
     checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
     callbacks_list = [checkpoint]
     # 30% of the train image will be the validation set
-    history = m.model.fit(x=train_img_data,y=train_lbl_data,epochs=30,batch_size=50,validation_split=0.3,callbacks=callbacks_list)
+    history = m.model.fit(x=train_img_data,y=train_lbl_data,epochs=50,batch_size=50,validation_split=0.3,callbacks=callbacks_list)
     m.model.summary()
 
     # Plot the curve graph of loss and accuracy
@@ -63,7 +64,7 @@ def main():
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Test'], loc='upper left')
     plt.show()
-    
+
     # Plot some images and labels from test set
     fig = plt.figure(figsize=(40,40))
     for i,data in enumerate(testing_images[20:50]):
